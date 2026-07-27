@@ -17,7 +17,6 @@
             overflow: hidden;
         }
 
-        /* Estilo base para todas as bolinhas */
         .dot-serv {
             width: 14px;
             height: 14px;
@@ -34,7 +33,6 @@
             background-color: #475569;
         }
 
-        /* Estilo do PONTO ATIVO (Azul com brilho) */
         .dot-serv.active {
             background-color: #3b82f6 !important;
             box-shadow: 0 0 12px rgba(59, 130, 246, 0.9) !important;
@@ -74,9 +72,13 @@
                 font-size: calc(75% + 5px);
             }
 
+            #credit {
+                font-size: 12px;
+            }
+
             #botao {
                 top: 79%;
-                opacity: 100;
+                opacity: 1;
                 width: 52px;
                 height: 52px;
                 align-items: center;
@@ -114,17 +116,21 @@
                 <a href="#depoimentos" class="hover:text-blue-900 transition">Clientes</a>
                 <a href="#contato" class="hover:text-blue-900 transition">Contato</a>
             </div>
-            <!-- Botão na Navbar -->
+
+            <!-- Botão na Navbar (Invisível no Mobile, visível a partir de telas médias: hidden md:block) -->
             <button onclick="toggleModal('modal-contato', true)"
-                class="bg-[#f05a10] hover:bg-[#d84e0b] text-white font-bold px-6 py-2.5 rounded shadow-md transition-all duration-200 uppercase tracking-wider text-sm cursor-pointer hover:scale-[1.02]">
+                class="hidden md:block bg-[#f05a10] hover:bg-[#d84e0b] text-white font-bold px-6 py-2.5 rounded shadow-md transition-all duration-200 uppercase tracking-wider text-sm cursor-pointer hover:scale-[1.02]">
                 Fale Conosco
             </button>
+
             <button id="menu-toggle"
                 class="md:hidden flex flex-col justify-center items-center w-11 h-11 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 transition focus:outline-none"
                 aria-label="Abrir Menu">
                 <span class="text-2xl text-gray-700">≡</span>
             </button>
         </nav>
+
+        <!-- Menu Mobile -->
         <div id="mobile-menu" class="hidden fixed inset-0 top-[91px] bg-[#e5e7eb] z-40 overflow-y-auto px-6 py-8">
             <div class="max-w-md mx-auto flex flex-col items-center">
                 <h2 class="text-base font-bold text-slate-600 tracking-widest mb-1 uppercase">Menu de Navegação</h2>
@@ -142,6 +148,12 @@
                         class="mobile-link bg-[#7ec1e4] text-white text-center py-3 rounded shadow-sm text-base font-medium hover:bg-[#6ab3da] transition">Clientes</a>
                     <a href="#contato"
                         class="mobile-link bg-[#7ec1e4] text-white text-center py-3 rounded shadow-sm text-base font-medium hover:bg-[#6ab3da] transition">Contato</a>
+
+                    <!-- Botão Fale Conosco exclusivo do Menu Mobile (posicionado abaixo de Contato) -->
+                    <button onclick="fecharMenuMobile(), toggleModal('modal-contato', true)" ;
+                        class="bg-[#f05a10] hover:bg-[#d84e0b] text-white text-center py-3 rounded shadow-md text-base font-bold uppercase tracking-wider transition cursor-pointer mt-1">
+                        Fale Conosco
+                    </button>
                 </div>
             </div>
         </div>
@@ -249,7 +261,7 @@
                     <button onclick="toggleModal('modal-contato', false)"
                         class="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg transition-colors"
                         aria-label="Fechar modal">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-9 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M6 18L18 6M6 6l12 12" />
                         </svg>
@@ -733,7 +745,7 @@
                 deste site está sujeito às medidas legais cabíveis.</p>
 
             <!-- Linha de créditos (Invertida) -->
-            <p class="text-slate-600 text-[16px]">
+            <p id="credit" class="text-slate-600 text-[25px]">
                 Built by
                 <a href="https://github.com/ItsKeyEnd2242" target="_blank" rel="noopener noreferrer"
                     class="text-slate-400 hover:text-white transition-colors underline decoration-slate-700">
@@ -745,7 +757,7 @@
     </footer>
 
     <!-- Container fixo posicionando o grupo na tela (subido em +18px) -->
-    <div class="fixed bottom-[110px] right-6 z-50 flex flex-col items-center gap-2">
+    <div class="fixed bottom-[120px] right-6 z-50 flex flex-col items-center gap-2">
 
         <!-- Caixa de Texto "Dúvidas?" (Visível no mobile, ESCONDIDA em sm: e telas maiores) -->
         <div
@@ -763,7 +775,7 @@
             id="botao"
             class="relative w-16 h-16 bg-[#25d366] rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-80 hover:opacity-100 hover:scale-105"
             aria-label="WhatsApp">
-            <svg class="w-9 h-9 text-white" fill="currentColor" viewBox="0 0 448 512">
+            <svg class="w-9 h-8 text-white" fill="currentColor" viewBox="0 0 448 512">
                 <path
                     d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.3 5.7 23.7 9.1 31.7 11.7 13.3 4.2 25.4 3.6 35.1 2.2 10.8-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
             </svg>
@@ -842,6 +854,11 @@
             toggleClass(document.body, 'menu-open', open);
             if (toggle) toggle.innerHTML = open ? '<span class="text-xl font-bold text-gray-700">✕</span>' : '<span class="text-2xl text-gray-700">≡</span>';
         };
+
+        // Torna a função acessível globalmente
+        window.toggleMenu = toggleMenu;
+        window.fecharMenuMobile = () => toggleMenu(false);
+
         toggle?.addEventListener('click', () => toggleMenu(menu.classList.contains('hidden')));
         document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
 
@@ -865,6 +882,9 @@
             if (!el) return;
             toggleClass(el, 'hidden', !open);
             toggleClass(document.body, 'menu-open', open);
+
+            // Fecha o menu mobile e reseta o ícone para "≡" ao abrir qualquer modal (incluindo Fale Conosco)
+            if (open) toggleMenu(false);
         };
         window.fecharModal = (id) => toggleModal(id, false);
         window.abrirModal = (id) => toggleModal(id, true);
@@ -879,40 +899,6 @@
         let slideAtualServico = 0;
         const totalSlidesServico = 6;
 
-        window.mudarSlideServico = function (index) {
-            console.log("--> Tentando mudar para o slide índice:", index);
-            slideAtualServico = index;
-
-            for (let i = 0; i < totalSlidesServico; i++) {
-                const slide = document.getElementById(`slide-serv-${i}`);
-                const dot = document.getElementById(`dot-serv-${i}`);
-
-                if (!slide) console.warn(`Aviso: Slide id="slide-serv-${i}" não encontrado!`);
-                if (!dot) console.warn(`Aviso: Ponto id="dot-serv-${i}" não encontrado!`);
-
-                if (slide) {
-                    slide.classList.toggle('hidden', i !== index);
-                }
-
-                if (dot) {
-                    if (i === index) {
-                        dot.classList.add('active');
-                    } else {
-                        dot.classList.remove('active');
-                    }
-                }
-            }
-        };
-
-        window.navegarServico = function (direcao) {
-            let novoIndex = slideAtualServico + direcao;
-
-            if (novoIndex < 0) novoIndex = totalSlidesServico - 1;
-            if (novoIndex >= totalSlidesServico) novoIndex = 0;
-
-            mudarSlideServico(novoIndex);
-        };
-
         // Função para exibir apenas o slide ativo
         window.mudarSlideServico = function (index) {
             slideAtualServico = index;
@@ -925,11 +911,19 @@
                 }
             }
 
-            // 2. Atualiza a cor azul dos pontos
+            // 2. Atualiza os pontos (dots)
             const dots = document.querySelectorAll('.dot-serv');
             dots.forEach((dot, i) => {
                 dot.classList.toggle('active', i === index);
             });
+        };
+
+        // Navegação ao clicar nas setas (-1 volta, 1 avança)
+        window.navegarServico = (direcao) => {
+            let novoIndex = slideAtualServico + direcao;
+            if (novoIndex < 0) novoIndex = totalSlidesServico - 1;
+            if (novoIndex >= totalSlidesServico) novoIndex = 0;
+            mudarSlideServico(novoIndex);
         };
 
         function abrirWhatsappDinâmico(mensagem) {
@@ -946,14 +940,6 @@
             const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagemCompleta)}`;
             window.open(url, '_blank');
         }
-
-        // Navegação ao clicar nas setas (-1 volta, 1 avança)
-        window.navegarServico = (direcao) => {
-            let novoIndex = slideAtualServico + direcao;
-            if (novoIndex < 0) novoIndex = totalSlidesServico - 1;
-            if (novoIndex >= totalSlidesServico) novoIndex = 0;
-            mudarSlideServico(novoIndex);
-        };
 
         // Fechamento de modal ao clicar no fundo escuro
         window.addEventListener('click', (e) => {
@@ -977,7 +963,6 @@
         const numeroTelefone = "555199836810";
 
         window.enviarWhatsapp = (servico) => {
-            // Detecta a hora atual e define o cumprimento correto
             const hora = new Date().getHours();
             const saudacao = hora >= 5 && hora < 12
                 ? "Olá, bom dia!"
@@ -985,7 +970,6 @@
                     ? "Olá, boa tarde!"
                     : "Olá, boa noite!";
 
-            // Mapeamento das mensagens utilizando a variável de saudação
             const mensagens = {
                 'Instalação Residencial': `${saudacao} Gostaria de solicitar um orçamento para serviços de instalação elétrica residencial.`,
                 'Manutenção Industrial': `${saudacao} Preciso de um orçamento técnico focado em manutenção/padrão industrial.`,
@@ -994,10 +978,8 @@
 
             const mensagem = mensagens[servico] || `${saudacao} Gostaria de obter mais informações.`;
 
-            // Abre o WhatsApp com o texto montado
             window.open(`https://api.whatsapp.com/send?phone=${numeroTelefone}&text=${encodeURIComponent(mensagem)}`, '_blank');
 
-            // Fecha o modal após o clique
             if (typeof toggleModal === 'function') {
                 toggleModal('modal-orcamento', false);
             }
