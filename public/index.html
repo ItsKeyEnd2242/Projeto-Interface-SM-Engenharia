@@ -189,7 +189,8 @@
             <p class="text-slate-600 mt-3">Infraestrutura elétrica robusta e inteligente em total conformidade técnica.
             </p>
         </div>
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Card 01 -->
             <div
                 class="bg-white p-8 rounded border border-slate-200 hover:border-blue-500 hover:shadow-xl transition group flex flex-col justify-between">
                 <div>
@@ -209,6 +210,8 @@
                     class="text-xs font-bold text-blue-700 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 cursor-pointer">Saiba
                     mais →</button>
             </div>
+
+            <!-- Card 02 -->
             <div
                 class="bg-white p-8 rounded border border-slate-200 hover:border-blue-500 hover:shadow-xl transition group flex flex-col justify-between">
                 <div>
@@ -228,17 +231,40 @@
                     class="text-xs font-bold text-blue-700 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 cursor-pointer">Saiba
                     mais →</button>
             </div>
+
+            <!-- Card 03 -->
             <div
                 class="bg-white p-8 rounded border border-slate-200 hover:border-blue-500 hover:shadow-xl transition group flex flex-col justify-between">
                 <div>
                     <div
                         class="w-12 h-12 bg-blue-50 rounded text-blue-700 flex items-center justify-center text-xl font-bold mb-6 group-hover:bg-blue-900 group-hover:text-white transition">
                         03</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-3">Regularizações</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Adequação técnica e legal de instalações
+                        elétricas junto às concessionárias e órgãos reguladores:</p>
+                    <ul class="text-slate-600 text-xs space-y-2 pl-4 list-disc mb-6">
+                        <li>Regularização de <strong>padrão de entrada e medidores</strong>.</li>
+                        <li>Aumento de <strong>carga e adequação tarifária</strong>.</li>
+                        <li>Aprovação de projetos junto à <strong>concessionária de energia</strong>.</li>
+                    </ul>
+                </div>
+                <button id="btn-regularizations"
+                    class="text-xs font-bold text-blue-700 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 cursor-pointer">Saiba
+                    mais →</button>
+            </div>
+
+            <!-- Card 04 -->
+            <div
+                class="bg-white p-8 rounded border border-slate-200 hover:border-blue-500 hover:shadow-xl transition group flex flex-col justify-between">
+                <div>
+                    <div
+                        class="w-12 h-12 bg-blue-50 rounded text-blue-700 flex items-center justify-center text-xl font-bold mb-6 group-hover:bg-blue-900 group-hover:text-white transition">
+                        04</div>
                     <h3 class="text-lg font-bold text-slate-900 mb-3">Consultoria Especializada</h3>
                     <p class="text-slate-600 text-sm leading-relaxed mb-4">Suporte consultivo para reduzir custos de
                         energia e resolver gargalos técnicos:</p>
                     <ul class="text-slate-600 text-xs space-y-2 pl-4 list-disc mb-6">
-                        <li> Consultoria em <strong>instalações comerciais</strong>, <strong>industriais</strong> e
+                        <li>Consultoria em <strong>instalações comerciais</strong>, <strong>industriais</strong> e
                             <strong>residenciais</strong>.
                         </li>
                         <li>Estudo de viabilidade de <strong>instalações elétricas</strong> e adequações.</li>
@@ -307,6 +333,31 @@
                         </div>
                     </a>
 
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Regularizações -->
+        <div id="modal-regularizations"
+            class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
+            <div
+                class="relative w-full max-w-2xl bg-[#eef2f6] border border-blue-200 rounded-xl shadow-2xl overflow-hidden text-slate-800">
+                <!-- Cabeçalho da Modal -->
+                <div class="bg-blue-900 text-white p-6 pr-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-300">Adequação Técnica &
+                        Legal</span>
+                    <h3 class="text-xl md:text-2xl font-black mt-1">Regularização de Instalações Elétricas</h3>
+                </div>
+
+                <!-- Botão Fechar -->
+                <button onclick="fecharModal('modal-regularizations')"
+                    class="absolute top-4 right-4 text-orange-600 hover:text-orange-700 bg-white hover:bg-orange-50 w-10 h-10 rounded-full flex items-center justify-center shadow-md text-xl font-bold transition">✕</button>
+
+                <!-- Conteúdo da Modal -->
+                <div class="p-6 md:p-8 space-y-6 max-h-[70vh] overflow-y-auto text-sm leading-relaxed">
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">De instalações elétricas em geral.</h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -820,8 +871,15 @@
         window.fecharModal = (id) => toggleModal(id, false);
         window.abrirModal = (id) => toggleModal(id, true);
 
-        ['projetos', 'laudos', 'consultoria'].forEach(id => {
-            $(`btn-${id}`)?.addEventListener('click', (e) => {
+        // Exemplo de integração no script de modais
+        document.getElementById('btn-regularizations')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleModal('modal-regularizations', true);
+        });
+
+        // Ou, se você estiver usando um loop genérico:
+        ['projetos', 'laudos', 'regularizations', 'consultoria'].forEach(id => {
+            document.getElementById(`btn-${id}`)?.addEventListener('click', (e) => {
                 e.preventDefault();
                 toggleModal(`modal-${id}`, true);
             });
