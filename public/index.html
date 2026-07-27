@@ -81,7 +81,7 @@
                 opacity: 1;
                 width: 52px;
                 height: 52px;
-                align-items: center;
+                align-items: left;
             }
         }
 
@@ -112,7 +112,6 @@
                 <a href="#inicio" class="hover:text-blue-900 transition">Início</a>
                 <a href="#servicos" class="hover:text-blue-900 transition">Serviços</a>
                 <a href="#sobre" class="hover:text-blue-900 transition">Sobre</a>
-                <a href="#portifolio" class="hover:text-blue-900 transition">Portifólio</a>
                 <a href="#depoimentos" class="hover:text-blue-900 transition">Clientes</a>
                 <a href="#contato" class="hover:text-blue-900 transition">Contato</a>
             </div>
@@ -131,7 +130,7 @@
         </nav>
 
         <!-- Menu Mobile -->
-        <div id="mobile-menu" class="hidden fixed inset-0 top-[91px] bg-[#e5e7eb] z-40 overflow-y-auto px-6 py-8">
+        <div id="mobile-menu" class="hidden fixed inset-0 top-[91px] bg-[#e5e7eb] z-[60] overflow-y-auto px-6 py-8">
             <div class="max-w-md mx-auto flex flex-col items-center">
                 <h2 class="text-base font-bold text-slate-600 tracking-widest mb-1 uppercase">Menu de Navegação</h2>
                 <div class="w-38 h-[7px] bg-slate-500 mb-6 rounded-full"></div>
@@ -142,15 +141,13 @@
                         class="mobile-link bg-[#7ec1e4] text-white text-center py-3 rounded shadow-sm text-base font-medium hover:bg-[#6ab3da] transition">Serviços</a>
                     <a href="#sobre"
                         class="mobile-link bg-[#7ec1e4] text-white text-center py-3 rounded shadow-sm text-base font-medium hover:bg-[#6ab3da] transition">Sobre</a>
-                    <a href="#portifolio"
-                        class="mobile-link bg-[#7ec1e4] text-white text-center py-3 rounded shadow-sm text-base font-medium hover:bg-[#6ab3da] transition">Portifólio</a>
                     <a href="#depoimentos"
                         class="mobile-link bg-[#7ec1e4] text-white text-center py-3 rounded shadow-sm text-base font-medium hover:bg-[#6ab3da] transition">Clientes</a>
                     <a href="#contato"
                         class="mobile-link bg-[#7ec1e4] text-white text-center py-3 rounded shadow-sm text-base font-medium hover:bg-[#6ab3da] transition">Contato</a>
 
                     <!-- Botão Fale Conosco exclusivo do Menu Mobile (posicionado abaixo de Contato) -->
-                    <button onclick="fecharMenuMobile(), toggleModal('modal-contato', true)" ;
+                    <button onclick="fecharMenuMobile(), toggleModal('modal-contato', true)"
                         class="bg-[#f05a10] hover:bg-[#d84e0b] text-white text-center py-3 rounded shadow-md text-base font-bold uppercase tracking-wider transition cursor-pointer mt-1">
                         Fale Conosco
                     </button>
@@ -169,11 +166,14 @@
                 class="inline-flex items-center gap-2 bg-blue-950/40 text-blue-400 border border-blue-800/30 text-[11px] md:text-[16px] font-bold px-3 py-1.5 rounded uppercase tracking-wider mb-6">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Energia sob controle. Segurança absoluta.
             </div>
-            <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight max-w-4xl leading-tight">Projetos, Laudos e
-                Soluções para Sistemas em Abastecimento de Combustíveis</h1>
-            <p class="text-slate-300 text-sm md:text-lg mb-10 max-w-2xl leading-relaxed">Desenvolvemos infraestrutura de
-                energia com máxima segurança, modelagem BIM avançada e total conformidade com as normas técnicas
-                vigentes.</p>
+            <div>
+                <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight max-w-4xl leading-tight">
+                    Projetos, Laudos, Regularizações e
+                    consultoria para sistemas elétricos.
+                    Experiência em atendimento a postos de
+                    combustíveis.
+                </h1>
+            </div>
             <button
                 class="inline-block border border-slate-600 hover:bg-white hover:text-slate-950 hover:border-white text-white font-bold px-8 py-4 rounded text-sm tracking-wider transition uppercase cursor-pointer"
                 onclick="abrirModal('modal-orcamento')">
@@ -325,11 +325,6 @@
                     <div>
                         <h4 class="font-bold text-slate-900 text-base mb-2">Subestações Particulares de Entrada de
                             Energia (Até 300 kVA)</h4>
-                        <p class="text-slate-600">Projeto, montagem e comissionamento de subestações de média tensão,
-                            abrangendo transformadores, QGBT e sistemas de medição e proteção. Todo o processo atende
-                            rigorosamente aos padrões das concessionárias e às exigências das normas <strong>NBR
-                                14039</strong>, <strong>NR-10</strong> e <strong>NR-20</strong>.
-                        </p>
                         <div class="h-44 w-full overflow-hidden">
                             <img src="./imgs/servicos/image1.png" alt="Laudo de SPDA"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-all duration-300" />
@@ -338,11 +333,6 @@
                     <div>
                         <h4 class="font-bold text-slate-900 text-base mb-2">Sistemas de Proteção contra Descargas
                             Atmosféricas (SPDA)</h4>
-                        <p class="text-slate-600">Instalação e manutenção de sistemas de para-raios e Dispositivos de
-                            Proteção contra Surtos (DPS) para captação, descida e escoamento seguro de descargas
-                            elétricas. Os serviços garantem a integridade das edificações e pessoas conforme a
-                            <strong>NBR 5419</strong></strong> e a <strong>NR-10</strong>.
-                        </p>
                         <div class="h-44 w-full overflow-hidden">
                             <img src="./imgs/servicos/image2.png" alt="Laudo de SPDA"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-all duration-300" />
@@ -351,11 +341,6 @@
                     <div>
                         <h4 class="font-bold text-slate-900 text-base mb-2">Instalações Elétricas Residenciais,
                             Comerciais e Industriais</h4>
-                        <p class="text-slate-600">Execução de infraestrutura elétrica completa, incluindo passagem de
-                            cabos, montagem de quadros de distribuição e balanceamento de cargas. As soluções asseguram
-                            eficiência e segurança total em conformidade com as normas <strong>NBR 5410</strong>,
-                            <strong>NBR 14039</strong>, <strong>NR-10</strong> e <strong>NR-20</strong>.
-                        </p>
                         <div class="h-44 w-full overflow-hidden">
                             <img src="./imgs/servicos/image3.png" alt="Laudo de SPDA"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-all duration-300" />
@@ -363,11 +348,6 @@
                     </div>
                     <div>
                         <h4 class="font-bold text-slate-900 text-base mb-2">Sistemas de Aterramento</h4>
-                        <p class="text-slate-600">Implantação e medição de malhas de aterramento e sistemas de
-                            equipotencialização para proteção de equipamentos e pessoas. Executamos estudos de solo,
-                            conexão de hastes e emissão de laudos técnicos baseados na <strong>NBR 5410</strong>,
-                            <strong>NBR 5419</strong> <strong>NR-10</strong>.
-                        </p>
                         <div class="h-44 w-full overflow-hidden">
                             <img src="./imgs/servicos/image4.png" alt="Laudo de SPDA"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-all duration-300" />
@@ -375,11 +355,6 @@
                     </div>
                     <div>
                         <h4 class="font-bold text-slate-900 text-base mb-2">Estação de Recarga de Veículo</h4>
-                        <p class="text-slate-600">Instalação de infraestrutura dedicada e equipamentos de recarga para
-                            veículos elétricos (Wallbox e estações de carga). O serviço inclui adequação do quadro
-                            elétrico, circuitos de proteção e integração segura seguindo as diretrizes das normas
-                            <strong>NBR 5410</strong> e <strong>NR-10</strong>.
-                        </p>
                         <div class="h-44 w-full overflow-hidden">
                             <img src="./imgs/servicos/image5.png" alt="Laudo de SPDA"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-all duration-300" />
@@ -387,11 +362,6 @@
                     </div>
                     <div>
                         <h4 class="font-bold text-slate-900 text-base mb-2">Painéis Solares</h4>
-                        <p class="text-slate-600">Projeto e montagem de sistemas fotovoltaicos (On-Grid e Off-Grid),
-                            cobrindo a instalação de módulos, inversores, String Boxes e conexão à rede. Todo o processo
-                            é executado com foco na máxima geração de energia e segurança pelas normas <strong>NBR
-                                5410</strong> e <strong>NR-10</strong>.
-                        </p>
                         <div class="h-44 w-full overflow-hidden">
                             <img src="./imgs/servicos/image6.png" alt="Laudo de SPDA"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-all duration-300" />
@@ -414,31 +384,13 @@
                 <div class="p-6 md:p-8 space-y-6 max-h-[70vh] overflow-y-auto text-sm leading-relaxed">
                     <div>
                         <h4 class="font-bold text-slate-900 text-base mb-2">Laudo de Sistemas de Aterramento</h4>
-                        <p class="text-slate-600">Elaboração de parecer técnico com medições de resistência da malha de
-                            aterramento (utilizando terrômetro), análise de continuidade dos condutores de proteção e
-                            verificação das conexões. O laudo atesta a eficácia do sistema na dissipação de correntes de
-                            falta e surtos, garantindo conformidade com as normas <strong>NBR 5410</strong>, <strong>NBR
-                                5419</strong> e <strong>NR-10</strong>.</p>
                     </div>
                     <div>
                         <h4 class="font-bold text-slate-900 text-base mb-2">Laudo de Instalações Elétricas em Geral</h4>
-                        <p class="text-slate-600">Inspeção técnica detalhada da infraestrutura elétrica residencial,
-                            comercial ou industrial. Avalia a conservação dos painéis, dimensionamento dos condutores,
-                            dispositivos de proteção, balanceamento de fases e conformidade das rotinas operacionais com
-                            o Prontuário de Instalações Elétricas (PIE), fundamentado nas normas <strong>NBR
-                                5410</strong>, <strong>NBR 14039</strong>, <strong>NR-10</strong> e
-                            <strong>NR-20</strong>.
-                        </p>
                     </div>
                     <div>
                         <h4 class="font-bold text-slate-900 text-base mb-2">Laudo de Sistemas de Proteção contra
                             Descargas Atmosféricas (SPDA)</h4>
-                        <p class="text-slate-600">Vistoria de campo e auditoria nos subsistemas de captação, descida e
-                            aterramento do para-raios, além da checagem dos Dispositivos de Proteção contra Surtos
-                            (DPS). Emite laudo de inspeção periódica com registro fotográfico e testes de integridade
-                            para atendimento às exigências do Corpo de Bombeiros, seguradoras e às diretrizes das normas
-                            <strong>NBR 5419</strong> e <strong>NR-10</strong>.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -457,8 +409,6 @@
                 <div class="p-6 md:p-8 space-y-6 max-h-[70vh] overflow-y-auto text-sm leading-relaxed">
                     <div>
                         <h4 class="font-bold text-slate-900 text-base mb-2">Instalações Elétricas e Geral</h4>
-                        <p class="text-slate-600">Avaliamos criticamente o uso de energia, diagnosticando perdas e
-                            oportunidades de economia e migração para o Mercado Livre de Energia.</p>
                     </div>
                 </div>
             </div>
@@ -546,52 +496,6 @@
         </div>
     </div>
 
-    <!-- Seção Portfólio / Empresas Parceiras -->
-    <section id="portifolio"
-        class="relative bg-slate-900 text-white py-20 px-4 sm:px-6 overflow-hidden border-t border-slate-800/50">
-        <div class="relative max-w-5xl mx-auto">
-
-            <!-- Cabeçalho da Seção -->
-            <div class="text-center mb-12 space-y-3">
-                <span
-                    class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-blue-400 bg-blue-500/10 border border-blue-500/20 shadow-sm">
-                    Portfólio
-                </span>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-100 tracking-tight">
-                    Organizações Parceiras
-                </h2>
-            </div>
-
-            <!-- Card Único com Imagens Empilhadas em Coluna -->
-            <div
-                class="relative rounded-3xl bg-slate-900/70 border border-slate-800 p-6 sm:p-12 shadow-2xl backdrop-blur-xl">
-
-                <!-- Container em Coluna (Uma em cima da outra) -->
-                <div class="flex flex-col gap-10 sm:gap-12 items-center justify-center">
-
-                    <!-- Imagem 1 -->
-                    <img src="./imgs/portifolio/image1-removebg-preview.png" alt="Empresas Parceiras 1"
-                        class="w-full max-w-4xl h-auto object-contain opacity-85 hover:opacity-100 hover:scale-[1.02] transition-all duration-300 filter grayscale hover:grayscale-0" />
-
-                    <!-- Divisor sutil entre as imagens (opcional) -->
-                    <div class="w-full max-w-2xl h-[1px] bg-slate-800/80"></div>
-
-                    <!-- Imagem 2 -->
-                    <img src="./imgs/portifolio/image2-removebg-preview.png" alt="Empresas Parceiras 2"
-                        class="w-full max-w-4xl h-auto object-contain opacity-85 hover:opacity-100 hover:scale-[1.02] transition-all duration-300 filter grayscale hover:grayscale-0" />
-
-
-                    <!-- Divisor sutil entre as imagens -->
-                    <div class="w-full max-w-2xl h-[1px] bg-slate-800/80"></div>
-
-                    <!-- Imagem 3 -->
-                    <img src="./imgs/portifolio/image3-removebg-preview.png" alt="Empresas Parceiras 3"
-                        class="w-full max-w-4xl h-auto object-contain opacity-85 hover:opacity-100 hover:scale-[1.02] transition-all duration-300 filter grayscale hover:grayscale-0" />
-
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section id="depoimentos" class="relative bg-slate-950 text-white py-20 px-4 sm:px-6 overflow-hidden">
         <div class="relative max-w-5xl mx-auto">
@@ -720,6 +624,37 @@
                 </div>
             </div>
         </div>
+
+        <!-- Card Único com Imagens Empilhadas em Coluna -->
+        <div
+            class="relative flex flex-col items-center justify-center text-center bg-slate-900/70 border border-slate-800 p-4 sm:p-8 shadow-2xl backdrop-blur-xl mt-12 md:mt-20 max-w-5xl mx-auto rounded-2xl">
+            <div>
+                <h1 class="text-3xl md:text-5xl font-black text-white tracking-tight uppercase mb-6">
+                    Portfólio
+                </h1>
+            </div>
+
+            <!-- Container em Coluna (Com max-width reduzido) -->
+            <div
+                class="flex flex-col gap-6 sm:gap-8 items-center justify-center w-full bg-white p-4 sm:p-8 rounded-xl max-w-3xl">
+
+                <!-- Imagem 1 -->
+                <img src="./imgs/portifolio/image 1.png" alt="Empresas Parceiras 1" class="w-full max-w-2xl h-auto" />
+
+                <!-- Divisor sutil entre as imagens -->
+                <div class="w-full max-w-lg h-[1px] bg-slate-200"></div>
+
+                <!-- Imagem 2 -->
+                <img src="./imgs/portifolio/image 2.png" alt="Empresas Parceiras 2" class="w-full max-w-2xl h-auto" />
+
+                <!-- Divisor sutil entre as imagens -->
+                <div class="w-full max-w-lg h-[1px] bg-slate-200"></div>
+
+                <!-- Imagem 3 -->
+                <img src="./imgs/portifolio/image 3.png" alt="Empresas Parceiras 3" class="w-full max-w-2xl h-auto" />
+
+            </div>
+        </div>
     </section>
 
     <footer id="contato" class="bg-slate-950 text-white pt-12 pb-8 px-6">
@@ -729,8 +664,6 @@
             <div class="relative z-10">
                 <h2 class="text-2xl md:text-4xl font-black mb-4 tracking-tight text-white">Precisa de Suporte Técnico
                     Especializado?</h2>
-                <h3 class="text-slate-200 text-[25px] md:text-base mb-8 max-w-xl mx-auto">Fale com a nossa equipe
-                    corporativa e garanta a segurança e conformidade do seu empreendimento.</h3>
                 <button
                     onclick="abrirWhatsappDinâmico('Gostaria de solicitar um orçamento técnico referente aos seus serviços de consultoria especializados.')"
                     class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold px-10 py-4 rounded text-sm shadow-xl transition uppercase tracking-wider">
@@ -743,24 +676,14 @@
             class="max-w-7xl mx-auto border-t border-slate-800/60 mt-12 pt-6 text-center text-xs text-slate-500 flex flex-col gap-2">
             <p>© 2026 Sadi Macedo Engenharia. Todos os direitos reservados. O uso não autorizado da marca e conteúdo
                 deste site está sujeito às medidas legais cabíveis.</p>
-
-            <!-- Linha de créditos (Invertida) -->
-            <p id="credit" class="text-slate-600 text-[25px]">
-                Built by
-                <a href="https://github.com/ItsKeyEnd2242" target="_blank" rel="noopener noreferrer"
-                    class="text-slate-400 hover:text-white transition-colors underline decoration-slate-700">
-                    ItsKeyEnd2242
-                </a>
-                &bull; Powered by <span class="text-slate-400 font-medium">vercel.app</span>
-            </p>
         </div>
     </footer>
 
     <!-- Container fixo posicionando o grupo na tela (subido em +18px) -->
-    <div class="fixed bottom-[120px] right-6 z-50 flex flex-col items-center gap-2">
+    <div class="fixed bottom-[120px] right-2 sm:right-4 z-50 flex flex-col items-center gap-2">
 
         <!-- Caixa de Texto "Dúvidas?" (Visível no mobile, ESCONDIDA em sm: e telas maiores) -->
-        <div
+        <div id="chat"
             class="sm:hidden relative bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-xl border border-slate-700 animate-bounce">
             Dúvidas?
             <!-- Triângulo da ponta da caixa apontando para o botão -->
@@ -773,9 +696,9 @@
         <button
             onclick="abrirWhatsappDinâmico('Gostaria de obter mais informações e esclarecer algumas dúvidas sobre os seus serviços.')"
             id="botao"
-            class="relative w-16 h-16 bg-[#25d366] rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-80 hover:opacity-100 hover:scale-105"
+            class="relative w-14 h-14 sm:w-16 sm:h-16 bg-[#25d366] rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-80 hover:opacity-100 hover:scale-105"
             aria-label="WhatsApp">
-            <svg class="w-9 h-8 text-white" fill="currentColor" viewBox="0 0 448 512">
+            <svg class="w-8 h-8 sm:w-9 sm:h-8 text-white" fill="currentColor" viewBox="0 0 448 512">
                 <path
                     d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.3 5.7 23.7 9.1 31.7 11.7 13.3 4.2 25.4 3.6 35.1 2.2 10.8-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
             </svg>
@@ -846,12 +769,20 @@
         const $ = id => document.getElementById(id);
         const toggleClass = (el, cls, force) => el?.classList.toggle(cls, force);
 
-        const menu = $('mobile-menu'), toggle = $('menu-toggle'), btn = $('botao');
+        const menu = $('mobile-menu'),
+            toggle = $('menu-toggle'),
+            btn = $('botao'),
+            chat = $('chat'); // ⬅️ Captura a caixa de texto "Dúvidas?" pelo ID "chat"
 
         // Menu Mobile Inteligente
         const toggleMenu = (open) => {
             toggleClass(menu, 'hidden', !open);
             toggleClass(document.body, 'menu-open', open);
+
+            // ⬇️ Oculta/mostra tanto o botão quanto a caixa "Dúvidas?"
+            if (btn) toggleClass(btn, 'hidden', open);
+            if (chat) toggleClass(chat, 'hidden', open);
+
             if (toggle) toggle.innerHTML = open ? '<span class="text-xl font-bold text-gray-700">✕</span>' : '<span class="text-2xl text-gray-700">≡</span>';
         };
 
@@ -883,7 +814,7 @@
             toggleClass(el, 'hidden', !open);
             toggleClass(document.body, 'menu-open', open);
 
-            // Fecha o menu mobile e reseta o ícone para "≡" ao abrir qualquer modal (incluindo Fale Conosco)
+            // Fecha o menu mobile e reseta o ícone para "≡" ao abrir qualquer modal
             if (open) toggleMenu(false);
         };
         window.fecharModal = (id) => toggleModal(id, false);
@@ -903,7 +834,6 @@
         window.mudarSlideServico = function (index) {
             slideAtualServico = index;
 
-            // 1. Alterna a visibilidade dos slides
             for (let i = 0; i < totalSlidesServico; i++) {
                 const slide = document.getElementById(`slide-serv-${i}`);
                 if (slide) {
@@ -911,7 +841,6 @@
                 }
             }
 
-            // 2. Atualiza os pontos (dots)
             const dots = document.querySelectorAll('.dot-serv');
             dots.forEach((dot, i) => {
                 dot.classList.toggle('active', i === index);
