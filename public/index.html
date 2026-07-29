@@ -98,16 +98,18 @@
     <header
         class="fixed top-0 left-0 w-full z-50 bg-[#f3f4f6] md:bg-white/95 md:backdrop-blur-md shadow-sm border-b border-gray-200">
         <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#inicio" class="flex items-center gap-2.5 group">
-                <div
-                    class="bg-blue-900 text-white p-2 rounded-lg font-black tracking-tighter text-xl transition group-hover:bg-blue-800">
-                    Sadi Macedo</div>
-                <div class="flex flex-col leading-none">
-                    <span class="tracking-wider font-extrabold text-slate-900 text-base md:text-lg">ENGENHARIA</span>
-                    <span class="text-[11px] md:text-[16px] tracking-[0.25em] text-blue-700 font-bold uppercase">em
-                        Engenharia Elétrica</span>
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <!-- Tamanho da logo controlado e limitado de acordo com o texto da navbar -->
+                <img src="./imgs/favicon.png" alt="Sadi Macedo Logo"
+                    class="w-18 h-18 md:w-20 md:h-20 object-contain flex-shrink-0" />
+                <div class="flex flex-col leading-tight">
+                    <span class="tracking-wider font-extrabold text-slate-900 text-base md:text-lg">SADI MACEDO</span>
+                    <span
+                        class="text-[10px] md:text-[13px] tracking-[0.2em] text-blue-700 font-bold uppercase">Engenharia
+                        Elétrica</span>
                 </div>
             </a>
+
             <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
                 <a href="#inicio" class="hover:text-blue-900 transition">Início</a>
                 <a href="#servicos" class="hover:text-blue-900 transition">Serviços</a>
@@ -116,7 +118,7 @@
                 <a href="#contato" class="hover:text-blue-900 transition">Contato</a>
             </div>
 
-            <!-- Botão na Navbar (Invisível no Mobile, visível a partir de telas médias: hidden md:block) -->
+            <!-- Botão na Navbar -->
             <button onclick="toggleModal('modal-contato', true)"
                 class="hidden md:block bg-[#f05a10] hover:bg-[#d84e0b] text-white font-bold px-6 py-2.5 rounded shadow-md transition-all duration-200 uppercase tracking-wider text-sm cursor-pointer hover:scale-[1.02]">
                 Fale Conosco
@@ -130,7 +132,7 @@
         </nav>
 
         <!-- Menu Mobile -->
-        <div id="mobile-menu" class="hidden fixed inset-0 top-[91px] bg-[#e5e7eb] z-[60] overflow-y-auto px-6 py-8">
+        <div id="mobile-menu" class="hidden fixed inset-0 top-[81px] bg-[#e5e7eb] z-[60] overflow-y-auto px-6 py-8">
             <div class="max-w-md mx-auto flex flex-col items-center">
                 <h2 class="text-base font-bold text-slate-600 tracking-widest mb-1 uppercase">Menu de Navegação</h2>
                 <div class="w-38 h-[7px] bg-slate-500 mb-6 rounded-full"></div>
@@ -146,7 +148,6 @@
                     <a href="#contato"
                         class="mobile-link bg-[#7ec1e4] text-white text-center py-3 rounded shadow-sm text-base font-medium hover:bg-[#6ab3da] transition">Contato</a>
 
-                    <!-- Botão Fale Conosco exclusivo do Menu Mobile (posicionado abaixo de Contato) -->
                     <button onclick="fecharMenuMobile(), toggleModal('modal-contato', true)"
                         class="bg-[#f05a10] hover:bg-[#d84e0b] text-white text-center py-3 rounded shadow-md text-base font-bold uppercase tracking-wider transition cursor-pointer mt-1">
                         Fale Conosco
