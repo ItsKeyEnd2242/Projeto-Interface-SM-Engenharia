@@ -8,6 +8,14 @@
     <link rel="icon" href="./imgs/favicon.png" sizes="any">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Trava o tamanho exato da logo no mobile e desktop */
+        #icon-header {
+            width: 76px ;
+            height: 96px ;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
         html {
             scroll-behavior: smooth;
             font-size: 130%;
@@ -91,7 +99,6 @@
             }
         }
     </style>
-</head>
 
 <body class="bg-[#f8fafc] text-slate-800 font-sans">
 
@@ -100,7 +107,7 @@
         <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#inicio" class="flex items-center gap-3 group">
                 <!-- Tamanho da logo controlado e limitado de acordo com o texto da navbar -->
-                <img src="./imgs/favicon.png" alt="Sadi Macedo Logo"
+                <img id="icon-header" src="./imgs/favicon.png" alt="Sadi Macedo Logo"
                     class="w-18 h-18 md:w-20 md:h-20 object-contain flex-shrink-0" />
                 <div class="flex flex-col leading-tight">
                     <span class="tracking-wider font-extrabold text-slate-900 text-base md:text-lg">SADI MACEDO</span>
@@ -165,7 +172,7 @@
         <div class="relative z-10 max-w-7xl mx-auto">
             <div
                 class="inline-flex items-center gap-2 bg-blue-950/40 text-blue-400 border border-blue-800/30 text-[11px] md:text-[16px] font-bold px-3 py-1.5 rounded uppercase tracking-wider mb-6">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Energia sob controle. Segurança absoluta.
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Energia sob controle. Segurança absoluta!
             </div>
             <div>
                 <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight max-w-4xl leading-tight">
